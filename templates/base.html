@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WOMM?</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <i class="fab fa-github fa-2x mx-3 ps-1" style="color: white;">WOMM?</i>
+      </a>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'feedback' %}">FEEDBACK</a>
+                </li>
+                &emsp;&emsp;&emsp;&emsp;&emsp;
+                <form class="me-3" action = '{% url 'home' %}' method = "get">
+                  <div class="form-white input-group" style="width: 250px;">
+                    <input type="search" class="form-control rounded" placeholder="Search"
+                      aria-label="Search" aria-describedby="search-addon" name="qwery" />
+                      <button type="submit" class="btn btn-danger">Search</button>
+                  </div>
+                </form>
+                &emsp;&emsp;&emsp;&emsp;
+                <a href="{% url 'add' %}" style="text-decoration: none; color: white;" ><button type="button" class="btn btn-primary"> Add Post</button></a>
+        </ul>
+              
+            </ul>
+          </li>
+          <b style="color: white;">Coded By Prash</b>
+      </div>
+    </div>
+  </nav>
+  
+ 
+  <!-- Navbar -->
+{% block content %}{% endblock  %}
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <strong>{{message | safe }}</strong> 
+
+
+
+<style>
+  body{
+background-color: rgb(136, 111, 111);
+}
+</style>
+
+
+<div class="background">
+<center>
+
+
+
+
+  
+<form method="post">
+    {% csrf_token %}
+    <!-- Name input -->
+    <div class="form-outline mb-4">
+    <b> Title </b> <br> {{form.Title}}
+    </div>
+  
+  
+    <!-- Message input -->
+    <div class="form-outline mb-4">
+        <b> Message </b> <br>
+         {{form.content}}
+    </div>
+  
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">POST</button>
+  </form>
+</center>
+</div>
+
+
+
+{% endblock content %}

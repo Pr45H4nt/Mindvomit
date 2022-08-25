@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+    <header>
+        <!-- Intro settings -->
+        <style>
+          /* Default height for small devices */
+          #intro-example {
+            height: 400px;
+          }
+      
+          /* Height for devices larger than 992px */
+          @media (min-width: 992px) {
+            #intro-example {
+              height: 600px;
+            }
+          }
+        </style>
+    
+      
+        <!-- Background image -->
+        <div
+          id="intro-example"
+          class="p-5 text-center bg-image"
+          style="background-image: url('https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');"
+        >
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">{{article.title}}</h1>
+                Posted on {{article.date}} <br>
+                <h5 class="mb-4">{{article.content}}</h5>
+                <a
+                  class="btn btn-outline-light btn-lg m-2"
+                  href="{% url 'home' %}"
+                  role="button"
+                  rel="nofollow"
+                >Back to Home</a
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background image -->
+      </header>
+
+
+
+
+
+
+
+
+
+{% endblock content%}
+

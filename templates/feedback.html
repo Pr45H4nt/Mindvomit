@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <style>
+        body{
+      background-color: rgb(136, 111, 111);
+      }
+      </style>
+      
+      
+      <div class="background">
+      <center>
+      
+      
+      
+      
+        
+      <form method="post" >
+          {% csrf_token %}
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+          <b> Name </b> <br> {{form.Name}}
+          </div>
+        
+          <div class="form-outline mb-4">
+            <b> Contact </b> <br> {{form.contact}}
+            </div>
+
+            <div class="form-outline mb-4">
+                <b> Email </b> <br> {{form.Email}}
+                </div>
+
+                <div class="form-outline mb-4">
+                    <b> Feedback </b> <br> {{form.message}}
+                    </div>
+        
+         
+        
+        
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4">send</button>
+        </form>
+      </center>
+      </div>
+      
+
+
+
+
+
+
+
+
+    {% endblock content %}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>About Us</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="static/css/mdb.min.css" />
+  </head>
+
+  <body>
+    <!-- Start your project here-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <i class="" style="color: white;">WOMM?</i>
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'about' %}">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'feedback' %}">FEEDBACK</a>
+                  </li>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;
+                  <form class="me-3" action = '{% url 'home' %}' method = "get">
+                    <div class="form-white input-group" style="width: 250px;">
+                      <input type="search" class="form-control rounded" placeholder="Search"
+                        aria-label="Search" aria-describedby="search-addon" name="qwery" />
+                        <button type="submit" class="btn btn-danger">Search</button>
+                    </div>
+                  </form>
+                  &emsp;&emsp;&emsp;&emsp;
+                  <a href="{% url 'add' %}" style="text-decoration: none; color: white;" ><button type="button" class="btn btn-primary"> Add Post</button></a>
+          </ul>
+                
+              </ul>
+            </li>
+            <b style="color: white;">Coded By Prash</b>
+        </div>
+      </div>
+    </nav>
+
+    <div id="preview" class="preview">
+      <div style="display: none"></div>
+      <div>
+        <div
+          data-draggable="true"
+          style="position: relative"
+          draggable="false"
+          class=""
+        >
+          <!----><!---->
+          <section draggable="false" class="container pt-5" data-v-271253ee="">
+            <section class="mb-10 text-center">
+              <h2 class="fw-bold mb-5">Python Programmer</h2>
+              <!-- Carousel wrapper -->
+              <div
+                id="carouselExampleControls"
+                class="carousel slide carousel-dark carousel-fade"
+                data-mdb-ride="carousel"
+              >
+                <div class="carousel-inner px-5 px-md-0">
+                  <div class="carousel-item active">
+                    <img
+                      class="rounded-circle shadow-1-strong mb-4"
+                      src="https://bit.ly/3AjD5GW"
+                      alt="avatar"
+                      style="width: 150px; height: 150px"
+                      aria-controls="#picker-editor"
+                      draggable="false"
+                    />
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-lg-8">
+                        <h5 class="mb-3">Prashant Paneru</h5>
+                        <p></p>
+                        <p class="text-muted">
+                          <i class="fas fa-quote-left pe-2"></i>
+                          <span
+                            >I'm a python developer, and I love coding. I’m an expert in backend web development, and I have a passion for creating beautiful, functional websites that make people happy. I'm also intrested in machine learning and data science. If you need help with any part of your project, give me a shout!</span
+                          >
+
+                          
+                        </p>
+                      </div>
+                    </div>
+                 
+                    <br><br>
+            <!-- Facebook -->
+<a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"
+><i class="fab fa-facebook-f"></i></a>&emsp;&emsp;
+
+<!-- Instagram -->
+<a class="btn btn-primary" style="background-color: #ac2bac;" href="#!" role="button"
+><i class="fab fa-instagram"></i
+></a>&emsp;&emsp;
+
+<!-- Github -->
+<a class="btn btn-primary" style="background-color: #333333;" href="#!" role="button"
+><i class="fab fa-github"></i
+></a>&emsp;&emsp;
+<!-- Reddit -->
+<a class="btn btn-primary" style="background-color: #ff4500;" href="#!" role="button"
+><i class="fab fa-reddit-alien"></i
+></a>&emsp;&emsp;
+              
+              
+              
+              
+              </div>
+              <!-- Carousel wrapper -->
+            </section>
+          </section>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="static/js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
