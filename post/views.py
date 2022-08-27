@@ -1,10 +1,13 @@
 from django.shortcuts import redirect, render
+import random
 from .models import Posts
 from .models import feedback as f
 from .forms import addpost , Feedback
 # Create your views here.
 def home(request):
     articles = Posts.objects.all().order_by('-id')
+    articles = list(articles)
+    random.shuffle(articles)
     if request.method == "GET":
         qwery = request.GET.get('qwery')
         if qwery != None:
